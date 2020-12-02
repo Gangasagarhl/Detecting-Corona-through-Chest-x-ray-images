@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+       
+    </head>
+    <body>
+        <center>
+            <div class='cont' style="width: 50%;float:right;padding:5px">
+                
+                <center>
+                {% if data == 1 %}
+                <h1 style='color:green;font-size: 50px'>Normal</h1>
+                <h3>You are safe</h3>
+                
+                {%else%}
+                <h1 style="color: red; font-size: 50px;"> COVID-19!!! </h1>
+                <h1 >It's better to have a check up with doctor</h1>
+                
+                {%endif%}
+                <br>
+                <br>
+                <a href="/" class='btn'><button style='font-size: 25px;'>Home Page</button></a>
+                </center>
+
+                
+
+            </div>
+
+
+            <div style="width: 40%;float:left">
+                
+                <img src="{{url_for('load_img')}}" alt='img' width='100%',height='100%'>
+            
+            </div>
+
+            
+
+        </center>
+        
+    </body>
+</html>

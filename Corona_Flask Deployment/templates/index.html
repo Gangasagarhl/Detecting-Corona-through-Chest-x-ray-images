@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <style>
+            #blockc
+            {
+                background-color: #00C1FC;
+                width: 100%;
+            }
+
+            #fl
+            {
+                float:left;
+                width:50%;
+
+            }
+
+            #fr
+            {
+                float:right;
+                width:50%;
+                border:1.5px;
+                border-color: black;
+
+            }
+
+            #heading
+            {
+                color:whitesmoke;
+                font-size: 50px;
+
+            }
+            img
+            {
+                width:100%;
+                height:20%;
+            }
+           
+        </style>    
+    </head>
+    <body>    
+        
+            <div class='cont' id='blockc'>
+                <center>
+                    <h1 id='heading'>CORONA Virtual Checkup<br> </h1>
+                </center>
+            </div>
+
+            <div id='fl'>
+                <div style='width:100%; height:30%'>
+                    <img src="{{ url_for('static', filename='download.webp') }}" width="100%" height="70%">
+                    
+                </div>
+
+            </div>  
+            
+            <div id='fr'>
+                <center>
+                    <h2 style='color:#09E896;font-size: 40px;'>~~~Let's Begin~~~</h2>
+                    <div style='padding:5%'>
+                    <p>
+                        Since Everything is opening up one by one now in India, everyone are curious regarding,<br>
+                        <b>"Whether They are affected By COVID-19"</b>.<br>
+                        Now as a team(Saga-R),we brought you a solution for your curiousity.<br>
+                        If you have recent Chest X-Ray image of yours, please upload it here, so that you cure your curiosity.
+                
+                    </p>
+                    </div>
+                    <br><br>
+                <div style='border:1.5px; border-color: black;'>
+                    <form method="POST" action="{{url_for('home')}}" enctype="multipart/form-data">
+                        <input type="file" name='image' class='btn'><br><br><br>
+                        <input type="submit" class='btn'>
+                    </form>
+                </div>
+                    </center>
+            </div>
+
+    
+    </body>
+</html>
